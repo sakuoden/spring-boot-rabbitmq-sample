@@ -2,8 +2,11 @@ rabbitmq:
   image: rabbitmq:management
   container_name: sample-rabbitmq
   ports:
+    # RabbitMQサーバーのポート
     - "5672:5672"
+    # コンソール画面のポート
     - "15672:15672"
+  # https://www.rabbitmq.com/configure.html
   environment:
     - "RABBITMQ_DEFAULT_USER=user"
     - "RABBITMQ_DEFAULT_PASS=password"
