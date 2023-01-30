@@ -1,12 +1,14 @@
-package rabbitmq.config.listener;
+package rabbitmq.sample.config.listener;
 
 import org.springframework.amqp.rabbit.connection.ConnectionFactory;
 import org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer;
 import org.springframework.amqp.rabbit.listener.adapter.MessageListenerAdapter;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import rabbitmq.config.queue.SampleQueueConfig;
+import org.springframework.context.annotation.Profile;
+import rabbitmq.sample.config.queue.SampleQueueConfig;
 
+@Profile({"sample"})
 @Configuration
 public class SampleReceiverConfig {
     @Bean

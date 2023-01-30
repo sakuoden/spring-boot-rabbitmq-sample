@@ -1,10 +1,12 @@
-package rabbitmq;
+package rabbitmq.sample;
 
 import org.springframework.amqp.rabbit.core.RabbitTemplate;
 import org.springframework.boot.CommandLineRunner;
+import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Component;
-import rabbitmq.config.queue.SampleQueueConfig;
+import rabbitmq.sample.config.queue.SampleQueueConfig;
 
+@Profile("sample")
 @Component
 public class Runner implements CommandLineRunner {
     RabbitTemplate rabbitTemplate;

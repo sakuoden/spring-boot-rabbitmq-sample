@@ -1,4 +1,4 @@
-package rabbitmq.config.listener;
+package rabbitmq.sample.config.listener;
 
 import org.springframework.stereotype.Component;
 
